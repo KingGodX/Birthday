@@ -1,0 +1,96 @@
+@import url("https://fonts.googleapis.com/css2?family=Kanit&family=Concert+One&display=swap");
+
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to right, #f8afb2, #fad0c4);
+  font-family: 'Kanit', sans-serif;
+  text-align: center;
+  color: white;
+  overflow-x: hidden;
+}
+
+h1 {
+  font-family: 'Concert One', cursive;
+  font-size: 5vw;
+  margin: 3rem 1rem 1rem;
+  animation: fadeIn 2s ease-in-out;
+}
+
+img.main {
+  width: 80%;
+  max-width: 200px;
+  border-radius: 20px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+  margin: 20px 0;
+  animation: zoomIn 3s ease;
+}
+
+p {
+  font-family: "Kanit", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+  max-width: 100%;
+  margin: 1rem auto;
+  line-height: 1.8;
+  animation: fadeIn 2.5s ease;
+
+}
+
+p span {
+  font-family: 'Concert One', cursive;
+  font-size: 5vw;
+  color: #fffacd;
+  display: block;
+  margin-top: 1rem;
+}
+
+.audio-player {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 30px;
+}
+
+.audio-player img {
+  width: 15vw;
+  max-width: 80px;
+  border-radius: 50%;
+  border: 3px solid #fff;
+  position: absolute;
+  top: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: rotate 8s linear infinite;
+}
+
+audio {
+  width: 70vw;
+  max-width: 250px;
+  border-radius: 20px;
+  animation: fadeIn 2s ease;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes zoomIn {
+  from { transform: scale(0.8); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+@keyframes rotate {
+  0% { transform: translateX(-50%) rotate(0deg); }
+  100% { transform: translateX(-50%) rotate(360deg); }
+}
+
+/* Extra small devices fix */
+@media (max-width: 350px) {
+  h1 { font-size: 6vw; }
+  p { font-size: 5vw; }
+  p span { font-size: 6vw; }
+  audio { width: 90vw; }
+}

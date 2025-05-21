@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy Birthday 💖</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .main {
+      width: 250px;
+      border-radius: 16px;
+      margin: 20px 0;
+      transition: opacity 3s ease;
+    }
+    .audio-player {
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🎂 HAPPY BIRTHDAY MY TEACHER 🎂</h1>
+
+  <img id="slide" src="https://img2.pic.in.th/pic/IMG_065834bea8b2ea4594af.jpg" class="main" alt="Picture" />
+
+
+  <p>
+    ขอให้ครูนุ้ยมีความสุขมากๆนะครับ<br /> 
+    ขอให้สุขภาพร่างกายของครูแข็งแรง<br />
+    ขอบคุณที่เป็นครูที่ดีของลูกศิษย์ทุกคนมาโดยตลอด<br />
+    ขอบคุณครูที่คอยตักเตือน คอยสั่งสอนเวลาผมทำผิด<br />
+    สั่งสอนลูกศิษย์ให้เป็นคนดีมาโดยตลอด<br />
+    ขอบคุณที่คอยพาไปเที่ยวด้วยกันด้วยกันหลายๆทริป<br />
+    ผมเองก็บรรยายไม่ถูกแต่รักมากนะเหมือนแม่คนที่2<br />
+    <span>Have A Good Day Kub</span>
+  </p>
+
+  <div class="audio-player">
+    <audio src="/music/Happy Birthday.mp3" autoplay loop controls></audio>
+  </div>
+
+  <script>
+    const images = [
+      "https://img2.pic.in.th/pic/IMG_065834bea8b2ea4594af.jpg",
+      "https://img5.pic.in.th/file/secure-sv1/IMG_06657914ef825fb8e0cf.jpg",
+      "https://img5.pic.in.th/file/secure-sv1/IMG_0666c95e6de825e33208.jpg",
+      "https://img5.pic.in.th/file/secure-sv1/IMG_0667edaaf8ce1ef33116.jpg",
+      "https://img2.pic.in.th/pic/IMG_066878e65055f7a774d4.jpg",
+      "https://img5.pic.in.th/file/secure-sv1/IMG_06699d126923bdb0cbac.jpg",
+    ];
+
+    let index = 0;
+    const imgElement = document.getElementById("slide");
+
+    setInterval(() => {
+      index = (index + 1) % images.length;
+      imgElement.style.opacity = 0;
+      setTimeout(() => {
+        imgElement.src = images[index];
+        imgElement.style.opacity = 1;
+      }, 500);
+    }, 7000); // เปลี่ยนรูปทุก 3 วินาที
+  </script>
+
+</body>
+</html>
